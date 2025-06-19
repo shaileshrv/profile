@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Shailesh Vishvakarma | Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .resume-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar-container {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        .sidebar {
+            height: 100%;
+            background: rgb(18, 56, 193);
+            padding: 30px 20px;
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        .sidebar img {
+            border-radius: 8px;
+            filter: grayscale(100%);
+            width: 100%;
+            margin-top: -30px;
+        }
+
+        .sidebar h1 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .sidebar p,
+        .sidebar a,
+        .sidebar div {
+            color: #eeeeee !important;
+        }
+
+        .content {
+            margin-left: 300px;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        section {
+            border-radius: 20px;
+            padding: 50px;
+        }
+
+        section:first-child {
+            margin-top: 10px;
+        }
+
+        section.gray {
+            background: #fafafa;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul.tech li {
+            margin-bottom: 20px;
+        }
+
+        ul.tech li strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        ul.list-unstyled li {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-me {
+                display: none;
+            }
+
+            section {
+                padding: 30px;
+            }
+
+            section:first-child {
+                margin-top: 0px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resume-container {
+                flex-direction: column;
+            }
+
+            .sidebar-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 10px;
+                margin-right: 0;
+            }
+
+            .about-me {
+                display: none;
+            }
+        }
+
+        /* Timeline Styles */
+        .timeline,
+        .education-timeline {
+            position: relative;
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 4px solid rgb(18, 56, 193);
+        }
+
+        .timeline-item,
+        .education-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before,
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border: 3px solid rgb(18, 56, 193);
+            border-radius: 50%;
+        }
+
+        .timeline-content h3,
+        .education-content h3 {
+            margin: 0;
+            font-size: 18px;
+            color: rgb(18, 56, 193);
+        }
+
+        .timeline-content h4,
+        .education-content p {
+            font-size: 15px;
+            color: #333;
+            margin: 2px 0 8px;
+        }
+
+        .timeline-content ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .timeline-content ul li {
+            margin-bottom: 6px;
+        }
+
+        /* Education Table */
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 16px;
+
+            border-collapse: separate;
+            /* Required for border-radius to work on table */
+            border-spacing: 0;
+            border: 1px solid #ccc;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            overflow: hidden;
+            /* Helps clip content in rounded corners */
+        }
+
+        .education-table thead {
+            background-color: rgb(18, 56, 193);
+            color: white;
+        }
+
+        .education-table th,
+        .education-table td {
+            border: 0px solid #ccc;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .education-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <div class="sidebar-container">
+            <aside class="sidebar text-center">
+                <h1>Shailesh Vishvakarma</h1>
+                <div class="mb-3"
+                    style="background: #fff; border-radius: 50%; width: 200px; height: 200px; margin: auto; overflow: hidden;">
+                    <img src="profile-2.jpeg" alt="Profile Picture" />
+                </div>
+                <p>Hi, my name is Shaileshkumar Vishvakarma and I'm a senior full stack engineer.</p>
+                <hr />
+                <div class="text-start">
+                    <div class="d-flex align-items-start mb-3">
+                        <div>
+                            <div style="width: 30px; text-align: center; ">
+                                <i class="fas fa-envelope me-2" style="width: 100%;"></i>
+                            </div>
+                        </div>
+                        <a href="mailto:shaileshrv.1432@gmail.com">shaileshrv.1432@gmail.com</a>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <div>
+                            <div style="width: 30px; text-align: center; ">
+                                <i class="fas fa-phone me-2" style="width: 100%;"></i>
+                            </div>
+                        </div>
+                        <span>+91 7204837681</span>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <div>
+                            <div style="width: 30px; text-align: center; ">
+                                <i class="fas fa-map-marker-alt me-2" style="width: 100%;"></i>
+                            </div>
+                        </div>
+                        <span>#2248, Gayatri Nagar Society, Gujarat, 396310</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Introduction -->
+            <section class="gray">
+                <div class="d-flex">
+                    <div>
+                        <h2 class="h1">Shailesh Vishvakarma</h2>
+                        <div style="font-size: 18px;">Senior Full Stack Engineer</div>
+                        <p class="mt-4">
+                            I’m a Senior Full Stack Engineer specializing in SAP Commerce Cloud (Hybris) and Spartacus
+                            frontend development. I have led major e-commerce projects at Accenture and Microsoft,
+                            delivering scalable, efficient solutions using Angular, .NET, Node.js, and Python.
+                            Currently, I’m focused on headless commerce and GenAI integration to enhance user experience
+                            and foster innovation.
+                        </p>
+                        <a target="_blank" href="Shailesh.Lead.FullStack.Manager.pdf" class="btn btn-primary mt-3"
+                            style="border-radius: 30px; padding-left: 30px; padding-right: 30px; background-color: rgb(18, 56, 193) !important; border-color: rgb(18, 56, 193) !important;;">
+                            <i class="fa-solid fa-download me-2"></i>My Resume
+                        </a>
+                    </div>
+                    <div>
+                        <img src="profile.png" class="about-me ms-5" alt="About Me" style="width: 300px; margin-bottom: -50px; margin-top: -50px;"
+                            style="width: 400px; border-radius: 8px;" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- What I Do -->
+            <section>
+                <h2>
+                    <div style="border-left: 5px solid rgb(18, 56, 193); padding-left: 20px;">What I Do</div>
+                </h2>
+                <p>
+                    I have 11+ years of experience building software applications for clients across industries. I
+                    specialize in full stack development, primarily focusing on enterprise-grade e-commerce platforms.
+                    Below is a quick overview of my technical skill set:
+                </p>
+                <div class="row mt-4">
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <ul class="tech list-unstyled">
+                            <li>
+                                <strong><i class="fas fa-shopping-cart text-primary me-2"
+                                        style="color: rgb(18, 56, 193) !important;"></i>E-commerce
+                                    Platforms</strong>
+                                <ul class="list-unstyled ps-3">
+                                    <li>SAP Commerce Cloud (Hybris)</li>
+                                    <li>Spartacus Framework</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong><i class="fas fa-layer-group text-primary me-2"
+                                        style="color: rgb(18, 56, 193) !important;"></i>Frameworks</strong>
+                                <ul class="list-unstyled ps-3">
+                                    <li>Spartacus</li>
+                                    <li>Angular</li>
+                                    <li>ASP.NET MVC</li>
+                                    <li>Node.js</li>
+                                    <li>React Native</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong><i class="fas fa-code text-primary me-2"
+                                        style="color: rgb(18, 56, 193) !important;"></i>Client-Side</strong>
+                                <ul class="list-unstyled ps-3">
+                                    <li>HTML, CSS, JavaScript</li>
+                                    <li>TypeScript</li>
+                                    <li>Bootstrap</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-md-6">
+                        <ul class="tech list-unstyled">
+                            <li>
+                                <strong><i class="fas fa-terminal text-primary me-2"
+                                        style="color: rgb(18, 56, 193) !important;"></i>Programming Languages</strong>
+                                <ul class="list-unstyled ps-3">
+                                    <li>C#</li>
+                                    <li>Python</li>
+                                    <li>Node.js</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong><i class="fas fa-database text-primary me-2"
+                                        style="color: rgb(18, 56, 193) !important;"></i>Databases</strong>
+                                <ul class="list-unstyled ps-3">
+                                    <li>SQL Server</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong><i class="fas fa-tools text-primary me-2"
+                                        style="color: rgb(18, 56, 193) !important;"></i>Tools Used</strong>
+                                <ul class="list-unstyled ps-3">
+                                    <li>Git, GitHub, Azure DevOps</li>
+                                    <li>Postman, Swagger</li>
+                                    <li>Docker, Kubernetes</li>
+                                    <li>Jenkins, CI/CD Pipelines</li>
+                                    <li>Figma, Photoshop</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section>
+                <h2>
+                    <div style="border-left: 5px solid rgb(18, 56, 193); padding-left: 20px;">Professional Experience
+                    </div>
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Accenture</h3>
+                            <h4>Associate Manager & Lead Spartacus Developer (2020 - Present)</h4>
+                            <p>Leading Spartacus development with SAP Commerce Cloud, integrating GenAI and headless
+                                commerce solutions.</p>
+                            <ul>
+                                <li>Led UK Migration Project with 10+ team members</li>
+                                <li>Implemented SAP Spartacus storefront</li>
+                                <li>Worked on GenAI and headless commerce integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Microsoft (via Collabera)</h3>
+                            <h4>Software Engineer (2019 - 2020)</h4>
+                            <ul>
+                                <li>Developed Microsoft Partner Center</li>
+                                <li>Used AngularJS, .NET Web API, ElasticSearch</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>IQVIA</h3>
+                            <h4>Full Stack Developer (2018 - 2019)</h4>
+                            <ul>
+                                <li>Built apps using Angular 2+, NodeJS, and .NET</li>
+                                <li>Managed MongoDB and Web API backends</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Siemens</h3>
+                            <h4>Software Developer (2017 - 2018)</h4>
+                            <ul>
+                                <li>Worked on .NET apps and explored Python and Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>REMO Software</h3>
+                            <h4>Software Engineer (2014 - 2017)</h4>
+                            <ul>
+                                <li>Built cloud-based applications with AngularJS and .NET</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2>
+                    <div style="border-left: 5px solid rgb(18, 56, 193); padding-left: 20px;">Education</div>
+                </h2>
+                <table class="education-table d-none d-md-table">
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>University</th>
+                            <th>Year</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>M.C.A.</strong></td>
+                            <td>Bangalore University</td>
+                            <td>2014</td>
+                            <td>79%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B.C.A.</strong></td>
+                            <td>VNSGU</td>
+                            <td>2011</td>
+                            <td>63.2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- without table format for mobile table device -->
+                <div class="d-md-none">
+                    <div class="mb-4">
+                        <div class="education-content">
+                            <h3><b>M.C.A.</b></h3>
+                            <p>Bangalore University, 2014</p>
+                            <p>Score: 79%</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="education-content">
+                            <h3><b>B.C.A.</b></h3>
+                            <p>VNSGU, 2011</p>
+                            <p>Score: 63.2%</p>
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
