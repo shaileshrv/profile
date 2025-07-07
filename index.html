@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <title>Shailesh Vishvakarma | Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
@@ -230,6 +230,11 @@
         .education-table tbody tr:hover {
             background-color: #f1f1f1;
         }
+
+        .tech-icon {
+            width: 30px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -295,9 +300,39 @@
                         </a>
                     </div>
                     <div>
-                        <img src="profile.png" class="about-me ms-5" alt="About Me" style="width: 300px; margin-bottom: -50px; margin-top: -50px;"
+                        <img src="profile.png" class="about-me ms-5" alt="About Me"
+                            style="width: 300px; margin-bottom: -50px; margin-top: -50px;"
                             style="width: 400px; border-radius: 8px;" />
                     </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="mb-3">These are a few of the projects I can publicly showcase. I’ve worked on many more
+                    impactful projects, but due to confidentiality, only these can be shared here.
+
+                </div>
+                
+
+                <div style="display: flex;  align-items: center;" class="mb-4">
+                    <div style="margin-right: 20px; width: 50px"><i style="font-size: 20px;  margin-right: 20px;"
+                            class="fa-solid  fa-globe "></i></div> <a
+                        style="font-size: 16px; font-weight: bold; text-decoration: none;"
+                        href="https://rajubhaipaanvala.onrender.com/home" target="_blank">Rajubhai Paanvala</a>
+                </div>
+
+                <div style="display: flex;  align-items: center;" class="mb-2">
+                    <div style="margin-right: 20px; width: 50px"><i style="font-size: 20px;  margin-right: 20px;"
+                            class="fa-brands fa-google-play "></i></div> <a
+                        style="font-size: 16px; font-weight: bold; text-decoration: none;"
+                        href="https://play.google.com/store/apps/details?id=com.evolve.tribal&hl=en_IN"
+                        target="_blank">Tribal</a>
+                </div>
+
+                <div style="display: flex;  align-items: center; " class="mb-2">
+                    <div style="font-size: 36px; margin-right: 20px; width: 50px;"><i class="fa-brands fa-npm"></i></div> <a
+                        style="font-size: 16px; font-weight: bold; text-decoration: none;"
+                        href="https://www.npmjs.com/package/git-state-archiver" target="_blank">git-state-archiver</a>
                 </div>
             </section>
 
@@ -315,34 +350,46 @@
                     <!-- Left Column -->
                     <div class="col-md-6">
                         <ul class="tech list-unstyled">
-                            <li>
-                                <strong><i class="fas fa-shopping-cart text-primary me-2"
-                                        style="color: rgb(18, 56, 193) !important;"></i>E-commerce
-                                    Platforms</strong>
-                                <ul class="list-unstyled ps-3">
-                                    <li>SAP Commerce Cloud (Hybris)</li>
-                                    <li>Spartacus Framework</li>
-                                </ul>
+                            <li class="d-flex">
+                                <div class="tech-icon"><strong><i class="fas fa-shopping-cart text-primary me-2"
+                                            style="color: rgb(18, 56, 193) !important;"></i></strong></div>
+                                <div><strong>E-commerce
+                                        Platforms</strong>
+                                    <ul class="list-unstyled ps-0">
+                                        <li>SAP Commerce Cloud (Hybris)</li>
+                                        <li>Spartacus Framework</li>
+                                    </ul>
+                                </div>
+
+
                             </li>
-                            <li>
-                                <strong><i class="fas fa-layer-group text-primary me-2"
-                                        style="color: rgb(18, 56, 193) !important;"></i>Frameworks</strong>
-                                <ul class="list-unstyled ps-3">
-                                    <li>Spartacus</li>
-                                    <li>Angular</li>
-                                    <li>ASP.NET MVC</li>
-                                    <li>Node.js</li>
-                                    <li>React Native</li>
-                                </ul>
+                            <li class="d-flex">
+                                <div class="tech-icon"><strong><i class="fas fa-layer-group text-primary me-2"
+                                            style="color: rgb(18, 56, 193) !important;"></i></strong></div>
+                                <div>
+                                    <strong>Frameworks</strong>
+                                    <ul class="list-unstyled ps-0">
+                                        <li>Spartacus</li>
+                                        <li>Angular</li>
+                                        <li>ASP.NET MVC</li>
+                                        <li>Node.js</li>
+                                        <li>React Native</li>
+                                    </ul>
+                                </div>
+
                             </li>
-                            <li>
-                                <strong><i class="fas fa-code text-primary me-2"
-                                        style="color: rgb(18, 56, 193) !important;"></i>Client-Side</strong>
-                                <ul class="list-unstyled ps-3">
-                                    <li>HTML, CSS, JavaScript</li>
-                                    <li>TypeScript</li>
-                                    <li>Bootstrap</li>
-                                </ul>
+                            <li class="d-flex">
+                                <div class="tech-icon"><strong><i class="fas fa-code text-primary me-2"
+                                            style="color: rgb(18, 56, 193) !important;"></i></strong></div>
+                                <div>
+                                    <strong>Client-Side</strong>
+                                    <ul class="list-unstyled ps-0">
+                                        <li>HTML, CSS, JavaScript</li>
+                                        <li>TypeScript</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </div>
+
                             </li>
                         </ul>
                     </div>
@@ -350,33 +397,47 @@
                     <!-- Right Column -->
                     <div class="col-md-6">
                         <ul class="tech list-unstyled">
-                            <li>
-                                <strong><i class="fas fa-terminal text-primary me-2"
-                                        style="color: rgb(18, 56, 193) !important;"></i>Programming Languages</strong>
-                                <ul class="list-unstyled ps-3">
-                                    <li>C#</li>
-                                    <li>Python</li>
-                                    <li>Node.js</li>
-                                </ul>
+                            <li class="d-flex">
+                                <div class="tech-icon"><strong><i class="fas fa-terminal text-primary me-2"
+                                            style="color: rgb(18, 56, 193) !important;"></i></strong></div>
+                                <div>
+                                    <strong>Programming Languages</strong>
+                                    <ul class="list-unstyled ps-0">
+                                        <li>C#</li>
+                                        <li>Python</li>
+                                        <li>Node.js</li>
+                                    </ul>
+                                </div>
+
                             </li>
-                            <li>
-                                <strong><i class="fas fa-database text-primary me-2"
-                                        style="color: rgb(18, 56, 193) !important;"></i>Databases</strong>
-                                <ul class="list-unstyled ps-3">
-                                    <li>SQL Server</li>
-                                    <li>MySQL</li>
-                                </ul>
+                            <li class="d-flex">
+                                <div class="tech-icon">
+                                    <strong><i class="fas fa-database text-primary me-2"
+                                            style="color: rgb(18, 56, 193) !important;"></i></strong>
+                                </div>
+                                <div>
+                                    <strong>Databases</strong>
+                                    <ul class="list-unstyled ps-0">
+                                        <li>SQL Server</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                </div>
+
                             </li>
-                            <li>
-                                <strong><i class="fas fa-tools text-primary me-2"
-                                        style="color: rgb(18, 56, 193) !important;"></i>Tools Used</strong>
-                                <ul class="list-unstyled ps-3">
-                                    <li>Git, GitHub, Azure DevOps</li>
-                                    <li>Postman, Swagger</li>
-                                    <li>Docker, Kubernetes</li>
-                                    <li>Jenkins, CI/CD Pipelines</li>
-                                    <li>Figma, Photoshop</li>
-                                </ul>
+                            <li class="d-flex">
+                                <div class="tech-icon"><strong><i class="fas fa-tools text-primary me-2"
+                                            style="color: rgb(18, 56, 193) !important;"></i></strong></div>
+                                <div>
+                                    <strong>Tools Used</strong>
+                                    <ul class="list-unstyled ps-0">
+                                        <li>Git, GitHub, Azure DevOps</li>
+                                        <li>Postman, Swagger</li>
+                                        <li>Docker, Kubernetes</li>
+                                        <li>Jenkins, CI/CD Pipelines</li>
+                                        <li>Figma, Photoshop</li>
+                                    </ul>
+                                </div>
+
                             </li>
                         </ul>
                     </div>
